@@ -1,1 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job_board</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+   
 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFvS9OCJGj5t8cA0oIXMEo1TEKlZasIdU9Rg&usqp=CAU">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+           
+            <p class="nav-link" href="#">Job Board
+                <br> Find Your Dream Job</p>
+        </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="browse_page.html">Browse page</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  pages
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                  <li><a class="dropdown-item" href="service.html">Service</a></li>
+                
+                  <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                </ul>
+             
+          
+                <li class="login">
+                    <a class="nav-link" href="post_job.html" style="background-color: #3c6499;">Post A Job</a>
+                </li>
+                <li class="login">
+                    <a class="nav-link" href="login.php">Login</a>
+                  </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <section class="home">
+            <h3>4325+ Jobs listed</h3>
+            <h1>Fine Your Dream Job</h1>
+            <p>We provide online instant cash loans with quick approval that suit your term length</p>
+            <button><a href="">Upload Your Resume</a></button>
+          </section>
+          <section class="search">
+            <div>
+              <input type="text" placeholder="eg: Web Development">
+        
+              <select id="cleaning_category" name="cleaning_category">
+                <option value="volvo">category</option>
+                <option value="saab">Accounting & Finance</option>
+                <option value="opel">Automative jobs</option>
+                <option value="audi">Software Development</option>
+                <option value="audi">Cyber security</option>
+                <option value="audi">Education Training</option>
+                <option value="audi">Health Care</option>
+               <option value="audi">Transportation</option>
+              <option value="audi">Telecommunication</option>
+              <option value="audi">Restaurant & Food</option>
+               </select>
+<select id="Location" name="Location" value="Location">
+                <option value="volvo">Location</option>
+                <option value="saab">Africa</option>
+                <option value="audi">Australia</option>
+                <option value="opel">Brazil</option>
+                <option value="audi">Canada</option>
+                <option value="audi">Dubai</option>
+                <option value="audi">France</option>
+                <option value="audi">Germany</option>
+                <option value="audi">New York</option>
+                <option value="audi">South Africa</option>
+                <option value="audi">Sri Lanka</option>
+                <option value="audi">Unitedkingdom</option>
+                </select>
+
+              <button id="search-button">Search</button>
+            </div>
+          </section>
+          <br><br>
+        </main>
+        <br>
+    <section id="services">
+      <div class="container">
+          <h1 class="text-center">Explore Top Categories</h1>
+          <div class="row">
+              <div class="col-lg-4 mt-4">
+                  <div class="card servicesText">
+                      <div class="card-body">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAjVBMVEX///8AAAAREiSOjo4AAAv39/fg4OESEhLv7+85OTm8vLxTU1PQ0NBxcXGrq6uLi4vo6Oifn580NDQvLy8kJCQKCyBMTEwaGhp4eHhEREQ/Pz9oaGhaWlqxsbGWlpYAABqDg4PHx8dNTVcgIC8ZGSg/P0kAABY0NTt8fYJ0dXpYWF0lJTFHR01mZ29HRlJCZ2ZDAAAB+ElEQVR4nO3Z23KCMBSFYbaKB9CqIHgE1BYKtPr+j9dWbS/Ai0CSbcaufxzlJvpNCCBqWQghhBBCCCGkKLvfqCEHaU7N2jOgXhqaaMqAamq6ouy+gaiZZxuIopFOVVsUuRoPw9Yo0rgH26Mo1DZXEijydc2VDIrWMwNRuuZKDkUjLXMliSJPx2qXRZGv4YojjdJxbpdH0VL5ulKAUr/aVaCUz1VjVPcOihZqV3tj1OpnlB3NKz0WtVT68YpQdDAR5en9ft4OpeUcLo0i2jr1okej7gYUUEABBRRQQD05ynOF8jhRq/5QqP6KD+UK34PbLhtqIj5ywoYKxWcq5FtTU0GVvedbU9/3KiOh/NpAnajWAQUUULKogVCsqPVhLNRhzYfaCP+kOtuwobbiI7dsqJ34yB0baiD821dUXev6UDTYTYTa1Y4/jaj2AQUUUM+Iil+EihlRi7HowPGCDWXkBdlIlG/i7qPF/M7fZneaV03/75QAFFBAAQUUUEABBRRQWlCOKpOjEGU59b+oW+QpNVmWrSS1JoQQQgghhBBC6NnrGpjVMzCrY2AXVHB53J46QZIEt62gc9viRyXH17e0FyR0TLIs6b3nxfHYoyyjtKTynDwKVX7kxWdZ5KeyOJ/iPCyi0ilLp5jGaapwqn7fqjr9wd+eub5+AWHWQWXhY/VEAAAAAElFTkSuQmCC" style="width: 50px;">
+              
+                    <h3>Accounting & Finance </h3>
+                         <p>You can view all popular jobs according your future careers.</p>
+                         <span>72 Active jobs</span>
+                       </div>
+                  </div>  
+              </div>
+              <div class="col-lg-4 mt-4">
+                  <div class="card servicesText">
+                      <div class="card-body">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3574/3574943.png" style="width: 50px;">
+                   
+                        <h3>Automotive </h3>
+                        <p>You can view all popular jobs according your future careers.</p>
+                        <span>30 Active jobs</span>
+                      </div>
+                  </div>  
+              </div>
+
+              <div class="col-lg-4 mt-4">
+                  <div class="card servicesText">
+                      <div class="card-body">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4WKu1BfgDNRyXBXSUh4SxUUwsGzN0tQOK3g&usqp=CAU" style="width: 50px;">
+                
+                        <h3>Software Development</h3>
+                        <p>You can view all popular jobs according your future careers.</p>
+                        <span>49 Active jobs</span>
+                      </div>
+                  </div>  
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-lg-4 mt-4">
+                  <div class="card servicesText">
+                      <div class="card-body">
+                        <img src="data:image/png;base64,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" style="width: 50px;">
+                  
+                        <h3>Cyber Security </h3>
+                        <p>You can view all popular jobs according your future careers.</p>
+                        <span>32 Active jobs</span>
+                      </div>
+                  </div>  
+              </div>
+
+              <div class="col-lg-4 mt-4">
+                  <div class="card servicesText">
+                      <div class="card-body">
+                        <img src="https://e7.pngegg.com/pngimages/129/154/png-clipart-computer-icons-education-learning-training-others-angle-text.png" style="width: 50px;">
+                      
+                        <h3>Education Training </h3>
+                        <p>You can view all popular jobs according your future careers.</p>
+                        <span>130 Active jobs</span>
+                      </div>
+                  </div>  
+              </div>
+
+              <div class="col-lg-4 mt-4">
+                  <div class="card servicesText">
+                      <div class="card-body">
+                        <img src="https://png.pngtree.com/png-vector/20190328/ourmid/pngtree-vector-health-icon-png-image_872129.jpg" style="width: 50px;">
+                      
+                        <h3>Health Care </h3>
+                        <p>You can view all popular jobs according your future careers.</p>
+                        <span>60 Active jobs</span>
+                      </div>
+                  </div>  
+              </div>
+
+              <div class="col-lg-4 mt-4">
+                <div class="card servicesText">
+                    <div class="card-body">
+                      <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/international-transportation-1887129-1599324.png" style="width: 50px;">
+                  
+                      <h3>Transportation</h3>
+                      <p>You can view all popular jobs according your future careers.</p>
+                      <span>75 Active jobs</span>
+                    </div>
+                </div>  
+            </div>
+
+            <div class="col-lg-4 mt-4">
+              <div class="card servicesText">
+                  <div class="card-body">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnOyRomrbFjQwfscoMz18d8wHiKcG9CMQLng&usqp=CAU" style="width: 50px;">
+                
+                    <h3>Telecommunication</h3>
+                    <p>You can view all popular jobs according your future careers.</p>
+                    <span>102 Active jobs</span>
+                  </div>
+              </div>  
+          </div>
+
+          <div class="col-lg-4 mt-4">
+            <div class="card servicesText">
+                <div class="card-body">
+                  <img src="https://cdn-icons-png.freepik.com/512/1996/1996055.png" style="width: 50px;">
+               
+                  <h3>Restaurant & Food</h3>
+                  <p>You can view all popular jobs according your future careers.</p>
+                  <span>145 Active jobs</span>
+                </div>
+            </div>  
+        </div>
+
+          </div>
+      </div>
+  </section>
+<br>
+  <section>
+    <h1 style="text-align: center;">Steps Our Working Process</h1>
+    <div class="job">
+     
+      <div class="apply ">
+       
+        <h3><bold>01.</bold>Create An Account</h3>
+        <p>Post a /job to tell us about your project. We'll quickly match you with the right freelancers fine place best. Nor again is there anyone who loves.</p>
+        <br>
+       
+        <h3>02.Search Job</h3>
+        <p>Post A Job To Tell Us About Your Project. We'll Quickly Match You With The Right Freelancers Find Place Best. Nor Again is there anyone who loves. </p>
+         <br>
+         
+         <h3>03.Save & Apply Jobs</h3>
+         <p>Post A Job To Tell Us About Your Project. We'll Quickly Match You With The Right Freelancers Find Place Best. Nor Again is there anyone who loves.</p>
+      </div>
+      <div class="apply">
+        <img src="https://greatresumesfast.com/wp-content/uploads/2015/10/job-search-picture.jpg" style="width: 500px; margin-right: 80px;">
+      </div>
+    </div>
+  </section>
+  <br>
+  <section>
+
+    <h1 style="text-align: center;">Best Job Offer For You</h1>
+    <p style="text-align: center;" >Discover jobs most relebant to you by Experience level,<br>Salary, location,job type,etc.</p>
+<br>
+    <div class="blog-box">
+      <div class="blog-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9M_1cHMt8o16nEw_giyM3Jx-hyKghaX41jw&usqp=CAU" alt="blog" style="width: 400px;">
+      </div>
+      <br>
+      <div class="blog-text">
+         
+          <h4><a href="">Digital Marketing Executive</a></h4><br>
+          <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+             <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+           </svg> Sacramento, California          
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+              <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+              <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+            </svg>  Pubished 2 days ago 
+            <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+             <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+           </svg>Full Time </span><br>
+           <button type="submit" class="blog_btn">Apply</button>
+        <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+    
+      </div>
+  </div>
+  <br>
+  <div class="blog-box">
+      <div class="blog-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRVn0nQvstQwPCd8WnJiniM20AHHB51kCIOg&usqp=CAU" alt="blog" style="width: 400px;">
+      </div>
+      <div class="blog-text">
+         
+         <h4><a href="">Accounting & Finance</a></h4><br>
+         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg> Sacramento, California          
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+             <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+           </svg>  Pubished 2 days ago 
+           <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+          </svg>Full Time </span><br>
+          <button type="submit" class="blog_btn">Apply</button>
+       <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+   
+     </div>
+  </div>
+  <br>
+  <div class="blog-box">
+      <div class="blog-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSu4qlGFlZfSeV6dwUM5mau9IXrdjE0-UKeg&usqp=CAU" alt="blog" style="width: 400px;">
+      </div>
+
+      <div class="blog-text">
+         
+         <h4><a href="">Software Developer</a></h4><br>
+         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg> Sacramento, California          
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+             <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+           </svg>  Pubished 2 days ago 
+           <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+          </svg>part Time </span><br>
+          <button type="submit" class="blog_btn">Apply</button>
+       <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+   
+     </div>
+  </div>
+ <br>
+  <div class="blog-box">
+      <div class="blog-img">
+          <img src="https://t3.ftcdn.net/jpg/04/20/82/78/360_F_420827892_krXE9Xd0N7x7IjWaD5kq6HNLDRlvvJCW.jpg" alt="blog" style="width:350px;">
+      </div>
+
+      <div class="blog-text">
+         
+         <h4><a href="">Front-end Developer</a></h4><br>
+         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg> Sacramento, California          
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+             <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+           </svg>  Pubished 2 days ago 
+           <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+          </svg>Full Time </span><br>
+          <button type="submit" class="blog_btn">Apply</button>
+       <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+   
+     </div>
+  </div>
+  <br>
+  <div class="blog-box">
+      <div class="blog-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJC-_kEpwDxKDLjxdOESy5_tQ9aJ4NVBvYcA&usqp=CAU" alt="blog" style="width: 350px;">
+      </div>
+      <div class="blog-text">
+         
+         <h4><a href="">Back-end Developer</a></h4><br>
+         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg> Sacramento, California          
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+             <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+           </svg>  Pubished 2 days ago 
+           <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+          </svg>Full Time </span><br>
+          <button type="submit" class="blog_btn">Apply</button>
+       <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+   
+     </div>
+  </div>
+  <br>
+  <div class="blog-box">
+      <div class="blog-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs5Ynfi-jxjVOVo2A3GO9D7QVNs-keQ36xSQ&usqp=CAU" alt="blog" style="width: 350px;">
+      </div>
+
+      <div class="blog-text">
+         
+         <h4><a href="">SQL Developer</a></h4><br>
+         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg> Sacramento, California          
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+             <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+           </svg>  Pubished 2 days ago 
+           <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+          </svg>Part Time </span><br>
+          <button type="submit" class="blog_btn">Apply</button>
+       <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+   
+     </div>
+  </div>
+  <br><br>
+  <div class="blog-box">
+      <div class="blog-img">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE48RefF9hoN1y0L6fudf9eu3S9vzhlt1tHQ&usqp=CAU" alt="blog" style="width: 350px;">
+      </div>
+      <div class="blog-text">
+         
+         <h4><a href="">Laravel Developer</a></h4><br>
+         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg> Sacramento, California          
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+             <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+           </svg>  Pubished 2 days ago 
+           <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+          </svg>Full Time </span><br>
+          <button type="submit" class="blog_btn">Apply</button>
+       <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+   
+     </div>
+  </div>
+  <br><br>
+  <div class="blog-box">
+      <div class="blog-img">
+          <img src="https://e7.pngegg.com/pngimages/792/651/png-clipart-mulesoft-logo-computer-software-company-organization-others-miscellaneous-blue-thumbnail.png" alt="blog">
+      </div>
+
+      <div class="blog-text">
+         
+         <h4><a href="">Solution Architect- Backend</a></h4><br>
+         <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+          </svg> Sacramento, California          
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+             <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+             <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+           </svg>  Pubished 2 days ago 
+           <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+          </svg>Part Time </span><br>
+          <button type="submit" class="blog_btn">Apply</button>
+       <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+   
+     </div>
+  </div>
+  </section>
+<br><br>
+  
+<footer>
+  <br>
+  <div id="container">
+    <br>
+    <div id="content">
+      <h4>Search Trending</h4>
+      
+        <p>Web Design</p>
+        <p>Web Development</p>
+        <p>Graphic Design</p>
+        <p>Health Care</p>
+        <p>Accounting</p>
+        <p>Digital Marketing</p>
+      
+
+    </div>
+
+    <div id="content">
+        <h5>Company</h5>
+       <p><a href="#">About Us</a></p> 
+       <p><a href="#">Blog</a></p> 
+       <p><a href="#">Service</a></p> 
+      <P><a href="contact.html">Contact</a></P>  
+         </div>
+
+    
+      
+       <div class="share">
+        <h6 style="padding: 10px; text-align: center;">Contact Us☛</h6>
+        <a href="https://www.facebook.com" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422199.png"></a>
+        <a href="https://www.instagram.com" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png"></a>
+        <a href="https://twitter.com/" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422210.png"></a>
+        <a href="https://telegram.org/" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422206.png"></a>
+        <a href="https://www.linkedin.com/" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422202.png"></a>
+      </div>
+    </div>
+ 
+  
+  <h6 class="credit">Created by <span>Ms. Web Developer</span> | @ all rights reserved!</h6>
+
+</footer>
+
+
+
+    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
