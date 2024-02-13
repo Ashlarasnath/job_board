@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+}
+#blog{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.blog-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.blog-heading span{
+    color: #f33c3c;
+}
+.blog-heading h1{
+    font-size: 2.4rem;
+    color: blue;
+    font-weight: 600;
+}
+.blog-container{
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px 0px;
+    flex-wrap: wrap;
+    width:100%;
+}
+.blog-box{
+     display: flex;
+   justify-content: center;
+}
+.blog-content{
+    display: flex;
+    max-width: 1000px;
+    
+}
+.blog-img{
+    flex: 0 0 30%;   
+}
+.blog-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+}
+.blog-text{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 70%;
+}
+.blog-text span{
+    font-size: 0.9rem;
+}
+.blog-text .blog-title{
+   font-size: 1.3rem;
+   font-weight: 500;
+   color: #272727;
+}
+.blog-text .blog-title:hover{
+    color: #f33c3c;
+    transition: all ease 0.3s;
+}
+.blog-text p{
+    color: #9b9b9b;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.blog-text a{
+    color: #0f0f0f;
+}
+.blog-text a:hover{
+    color:#f33c3c;
+    transition: all ease 0.3s;
+}
+@media(max-width:1250px){
+    .blog-box{
+        width: 300px;
+    }
+}
+@media(max-width:1100px){
+    .blog-box{
+        width: 70%;
+    }
+}
+.blog_btn{
+    color: rgb(244, 250, 247);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(14, 136, 14);
+    width: 100px;
+    
+}
+.page {
+  display: inline-block;
+  padding-left: 300px;
+}
+
+.page a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.page a.active {
+  background-color: #204697;
+  color: white;
+  border-radius: 5px;
+}
+
+.page a:hover:not(.active) {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <header>
+   
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFvS9OCJGj5t8cA0oIXMEo1TEKlZasIdU9Rg&usqp=CAU">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+               
+                <p class="nav-link" href="#">Job Board
+                    <br> Find Your Dream Job</p>
+            </li>
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="browse_page.html">Browse page</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      pages
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                      <li><a class="dropdown-item" href="service.html">Service</a></li>
+                    
+                      <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                    </ul>
+                 
+              
+                    <li class="login">
+                        <a class="nav-link" href="post_job.html" style="background-color: #3c6499;">Post A Job</a>
+                    </li>
+                    <li class="login">
+                        <a class="nav-link" href="login.php">Login</a>
+                      </li>
+                </ul>
+               
+              </div>
+            </div>
+          </nav>
+        </header>
+    <div class="blog-container">
+           <h3 style="padding-left: 30px;">1945 JOBS FOUND</h3>
+           <p style="padding-left: 500px;">Sort by freshness</p><br>
+          
+        <div class="blog-box">
+             <div class="blog-img">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9M_1cHMt8o16nEw_giyM3Jx-hyKghaX41jw&usqp=CAU" alt="blog" style="width: 400px;">
+             </div>
+             <br>
+             <div class="blog-text">
+                
+                 <h4><a href="">Digital Marketing Executive</a></h4><br>
+                 <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                    <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                  </svg> Sacramento, California          
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                     <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                     <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                   </svg>  Pubished 2 days ago 
+                   <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                  </svg>Full Time </span><br>
+                  <button type="submit" class="blog_btn">Apply</button>
+               <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+           
+             </div>
+         </div>
+         <br>
+         <div class="blog-box">
+             <div class="blog-img">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRVn0nQvstQwPCd8WnJiniM20AHHB51kCIOg&usqp=CAU" alt="blog" style="width: 400px;">
+             </div>
+             <div class="blog-text">
+                
+                <h4><a href="">Accounting & Finance</a></h4><br>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                 </svg> Sacramento, California          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                  </svg>  Pubished 2 days ago 
+                  <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                 </svg>Full Time </span><br>
+                 <button type="submit" class="blog_btn">Apply</button>
+              <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+          
+            </div>
+         </div>
+         <br>
+         <div class="blog-box">
+             <div class="blog-img">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSu4qlGFlZfSeV6dwUM5mau9IXrdjE0-UKeg&usqp=CAU" alt="blog" style="width: 400px;">
+             </div>
+
+             <div class="blog-text">
+                
+                <h4><a href="">Software Developer</a></h4><br>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                 </svg> Sacramento, California          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                  </svg>  Pubished 2 days ago 
+                  <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                 </svg>part Time </span><br>
+                 <button type="submit" class="blog_btn">Apply</button>
+              <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+          
+            </div>
+         </div>
+        <br>
+         <div class="blog-box">
+             <div class="blog-img">
+                 <img src="https://t3.ftcdn.net/jpg/04/20/82/78/360_F_420827892_krXE9Xd0N7x7IjWaD5kq6HNLDRlvvJCW.jpg" alt="blog" style="width:350px;">
+             </div>
+
+             <div class="blog-text">
+                
+                <h4><a href="">Front-end Developer</a></h4><br>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                 </svg> Sacramento, California          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                  </svg>  Pubished 2 days ago 
+                  <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                 </svg>Full Time </span><br>
+                 <button type="submit" class="blog_btn">Apply</button>
+              <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+          
+            </div>
+         </div>
+         <br>
+         <div class="blog-box">
+             <div class="blog-img">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJC-_kEpwDxKDLjxdOESy5_tQ9aJ4NVBvYcA&usqp=CAU" alt="blog" style="width: 350px;">
+             </div>
+             <div class="blog-text">
+                
+                <h4><a href="">Back-end Developer</a></h4><br>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                 </svg> Sacramento, California          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                  </svg>  Pubished 2 days ago 
+                  <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                 </svg>Full Time </span><br>
+                 <button type="submit" class="blog_btn">Apply</button>
+              <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+          
+            </div>
+         </div>
+         <br>
+         <div class="blog-box">
+             <div class="blog-img">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs5Ynfi-jxjVOVo2A3GO9D7QVNs-keQ36xSQ&usqp=CAU" alt="blog" style="width: 350px;">
+             </div>
+
+             <div class="blog-text">
+                
+                <h4><a href="">SQL Developer</a></h4><br>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                 </svg> Sacramento, California          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                  </svg>  Pubished 2 days ago 
+                  <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                 </svg>Part Time </span><br>
+                 <button type="submit" class="blog_btn">Apply</button>
+              <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+          
+            </div>
+         </div>
+         <br><br>
+         <div class="blog-box">
+             <div class="blog-img">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE48RefF9hoN1y0L6fudf9eu3S9vzhlt1tHQ&usqp=CAU" alt="blog" style="width: 350px;">
+             </div>
+             <div class="blog-text">
+                
+                <h4><a href="">Laravel Developer</a></h4><br>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                 </svg> Sacramento, California          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                  </svg>  Pubished 2 days ago 
+                  <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                 </svg>Full Time </span><br>
+                 <button type="submit" class="blog_btn">Apply</button>
+              <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+          
+            </div>
+         </div>
+         <br><br>
+         <div class="blog-box">
+             <div class="blog-img">
+                 <img src="https://e7.pngegg.com/pngimages/792/651/png-clipart-mulesoft-logo-computer-software-company-organization-others-miscellaneous-blue-thumbnail.png" alt="blog">
+             </div>
+
+             <div class="blog-text">
+                
+                <h4><a href="">Solution Architect- Backend</a></h4><br>
+                <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                   <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                 </svg> Sacramento, California          
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16">
+                    <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708"/>
+                  </svg>  Pubished 2 days ago 
+                  <br> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark" viewBox="0 0 16 16">
+                   <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z"/>
+                 </svg>Part Time </span><br>
+                 <button type="submit" class="blog_btn">Apply</button>
+              <h6 style="padding-left: 600px;">$1200 - $2500</h6>
+
+          
+            </div>
+         </div>
+     </div> 
+     <div class="page">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">&raquo;</a>
+      </div>
+
+     <footer>
+        <br>
+        <div id="container">
+          <br>
+          <div id="content">
+            <h4>Search Trending</h4>
+            
+              <p>Web Design</p>
+              <p>Web Development</p>
+              <p>Graphic Design</p>
+              <p>Health Care</p>
+              <p>Accounting</p>
+              <p>Digital Marketing</p>
+            
+      
+          </div>
+      
+          <div id="content">
+              <h5>Company</h5>
+             <p><a href="#">About Us</a></p> 
+             <p><a href="#">Blog</a></p> 
+             <p><a href="#">Service</a></p> 
+            <P><a href="contact.html">Contact</a></P>  
+               </div>
+      
+          
+            
+             <div class="share">
+              <h6 style="padding: 10px; text-align: center;">Contact Us☛</h6>
+              <a href="https://www.facebook.com" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422199.png"></a>
+              <a href="https://www.instagram.com" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422200.png"></a>
+              <a href="https://twitter.com/" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422210.png"></a>
+              <a href="https://telegram.org/" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422206.png"></a>
+              <a href="https://www.linkedin.com/" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/6422/6422202.png"></a>
+            </div>
+          </div>
+       
+        
+        <h6 class="credit">Created by <span>Ms. Web Developer</span> | @ all rights reserved!</h6>
+      
+      </footer>
+
+     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
